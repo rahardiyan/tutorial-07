@@ -12,7 +12,11 @@ import com.apap.tu07.model.PilotModel;
  */
 @Repository
 public interface PilotDb extends JpaRepository<PilotModel, Long> {
-    Optional<PilotModel> findByLicenseNumber(String licenseNumber);
+    PilotModel findByLicenseNumber(String licenseNumber);
+    
+    //PilotModel findByLicenseNumber(String licenseNumber);
 
     void deleteByLicenseNumber(String licenseNumber);
+    
+    void deleteById(Long id);
 }

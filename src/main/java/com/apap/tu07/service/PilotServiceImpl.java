@@ -19,7 +19,7 @@ public class PilotServiceImpl implements PilotService {
     private PilotDb pilotDb;
 
     @Override
-    public Optional<PilotModel> getPilotDetailByLicenseNumber(String licenseNumber) {
+    public PilotModel getPilotDetailByLicenseNumber(String licenseNumber) {
         return pilotDb.findByLicenseNumber(licenseNumber);
     }
 
@@ -39,13 +39,12 @@ public class PilotServiceImpl implements PilotService {
     }
 
 	@Override
-	public void deletePilot(PilotModel pilot) {
-		pilotDb.delete(pilot);
+	public void updatePilot(long pilotId, PilotModel pilot) {
+		
 	}
 
 	@Override
-	public void updatePilot(long pilotId, PilotModel pilot) {
-		// TODO Auto-generated method stub
-		
+	public void deletePilot(PilotModel pilot) {
+		pilotDb.delete(pilot);
 	}
 }

@@ -8,7 +8,7 @@ import com.apap.tu07.model.PilotModel;
  * PilotService
  */
 public interface PilotService {
-    Optional<PilotModel> getPilotDetailByLicenseNumber(String licenseNumber);
+    PilotModel getPilotDetailByLicenseNumber(String licenseNumber);
 
     PilotModel addPilot(PilotModel pilot);
 
@@ -16,8 +16,7 @@ public interface PilotService {
 
     Optional<PilotModel> getPilotDetailById(long id);
 
-	void deletePilot(PilotModel pilot);
-
 	void updatePilot(long pilotId, PilotModel pilot);
 
+	void deletePilot(PilotModel pilot);
 }

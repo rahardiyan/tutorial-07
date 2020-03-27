@@ -1,5 +1,5 @@
 package com.apap.tu07.rest;
 
 public class Setting {
-	final public static String pilotUrl = "https://db012c97-0672-45bd-91ba-f0ee54c90bd5.mock.pstmn.io";
+	final public static String pilotUrl = "https://8b4459fc-3d49-4dc6-b9e5-f2d69c6ca67e.mock.pstmn.io";
 }

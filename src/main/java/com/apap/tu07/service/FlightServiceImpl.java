@@ -1,5 +1,6 @@
 package com.apap.tu07.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,4 +33,20 @@ public class FlightServiceImpl implements FlightService {
     public Optional<FlightModel> getFlightDetailByFlightNumber(String flightNumber) {
         return flightDb.findByFlightNumber(flightNumber);
     }
+
+	@Override
+	public void deleteFlight(FlightModel flight) {
+		flightDb.delete(flight);
+	}
+
+	@Override
+	public void updateFlight(String flightNumb, FlightModel flight) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public List<FlightModel> getAllFlight() {
+	        return flightDb.findAll();
+	}
 }
